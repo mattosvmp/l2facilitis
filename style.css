@@ -170,7 +170,9 @@ body {
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  /* Começa abaixo da navbar fixa (90px) em vez de passar por trás dela */
+  margin-top: 90px;
+  height: calc(100vh - 90px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -228,8 +230,7 @@ body {
   position: relative;
   z-index: 10;
   text-align: center;
-  /* Compensa o header fixo (~90px) para o bloco centralizar abaixo dele */
-  padding: 110px 20px 0;
+  padding: 0 20px;
   max-width: 800px;
   width: 100%;
 }
@@ -266,7 +267,7 @@ body {
 
 @media (max-width: 768px) {
   .hero-content {
-    padding-top: 100px;
+    padding-top: 0;
   }
   .hero-logo {
     width: 160px;
